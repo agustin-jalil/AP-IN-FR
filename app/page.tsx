@@ -21,7 +21,6 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
-      <Apple className="h-16 w-16 text-foreground mb-6" />
       <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
       <p className="mt-4 text-muted-foreground">Cargando...</p>
     </main>
