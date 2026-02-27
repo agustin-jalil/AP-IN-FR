@@ -31,7 +31,7 @@ export function DashboardSidebar() {
   };
 
   return (
-    <aside className="w-64 border-r border-border bg-sidebar flex flex-col">
+    <aside className="hidden lg:flex w-64 border-r border-border bg-sidebar flex-col">
       <div className="p-6 border-b border-sidebar-border">
         <Link href="/dashboard" className="flex items-center gap-3">
           <Logo className="h-7 w-7 text-sidebar-foreground" />

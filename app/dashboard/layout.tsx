@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth-context';
 import { DashboardSidebar } from '@/components/dashboard/sidebar';
+import { MobileHeader } from '@/components/dashboard/mobile-header';
 import { Loader2 } from 'lucide-react';
 
 export default function DashboardLayout({
@@ -34,8 +35,9 @@ export default function DashboardLayout({
 
   return (
     <div className="flex min-h-screen">
+      <MobileHeader />
       <DashboardSidebar />
-      <main className="flex-1 overflow-auto">{children}</main>
+      <main className="flex-1 overflow-auto pt-14 lg:pt-0">{children}</main>
     </div>
   );
 }

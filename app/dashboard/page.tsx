@@ -51,15 +51,15 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-semibold tracking-tight">Dashboard</h1>
-        <p className="text-muted-foreground mt-1">
+    <div className="p-4 md:p-6 lg:p-8">
+      <div className="mb-6 md:mb-8">
+        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">Dashboard</h1>
+        <p className="text-sm md:text-base text-muted-foreground mt-1">
           Resumen general del inventario
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
         {statCards.map((stat) => (
           <Card key={stat.title} className="bg-card border-border">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -76,9 +76,9 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent>
               {isLoading ? (
-                <div className="h-8 w-24 bg-muted animate-pulse rounded" />
+                <div className="h-6 md:h-8 w-16 md:w-24 bg-muted animate-pulse rounded" />
               ) : (
-                <div className="text-2xl font-bold">
+                <div className="text-lg md:text-2xl font-bold truncate">
                   {stat.format(stat.value)}
                 </div>
               )}
@@ -87,7 +87,7 @@ export default function DashboardPage() {
         ))}
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-6 md:mt-8 grid gap-4 md:grid-cols-2">
         <Card className="bg-card border-border">
           <CardHeader>
             <CardTitle className="text-lg font-semibold">

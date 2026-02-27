@@ -16,21 +16,21 @@ export function Pagination({ meta, onPageChange }: PaginationProps) {
   const end = Math.min(page * limit, total);
 
   return (
-    <div className="flex items-center justify-between py-4">
-      <p className="text-sm text-muted-foreground">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-4">
+      <p className="text-xs sm:text-sm text-muted-foreground order-2 sm:order-1">
         Mostrando {start} a {end} de {total} productos
       </p>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 sm:gap-2 order-1 sm:order-2">
         <Button
           variant="outline"
           size="sm"
           onClick={() => onPageChange(page - 1)}
           disabled={!hasPrevPage}
-          className="h-8"
+          className="h-8 px-2 sm:px-3"
         >
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          Anterior
+          <ChevronLeft className="h-4 w-4" />
+          <span className="hidden sm:inline ml-1">Anterior</span>
         </Button>
 
         <div className="flex items-center gap-1">
@@ -52,7 +52,7 @@ export function Pagination({ meta, onPageChange }: PaginationProps) {
                 variant={pageNum === page ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => onPageChange(pageNum)}
-                className="h-8 w-8 p-0"
+                className="h-8 w-8 p-0 text-xs sm:text-sm"
               >
                 {pageNum}
               </Button>
@@ -65,10 +65,10 @@ export function Pagination({ meta, onPageChange }: PaginationProps) {
           size="sm"
           onClick={() => onPageChange(page + 1)}
           disabled={!hasNextPage}
-          className="h-8"
+          className="h-8 px-2 sm:px-3"
         >
-          Siguiente
-          <ChevronRight className="h-4 w-4 ml-1" />
+          <span className="hidden sm:inline mr-1">Siguiente</span>
+          <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
     </div>

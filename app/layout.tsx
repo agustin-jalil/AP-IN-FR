@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'TodoApple Stock Dashboard',
-  description: 'Invetario de stock TodoApple',
+  description: 'Sistema de gestión de inventario para productos Apple',
   icons: {
     icon: '/logo.svg',
     apple: '/logo.svg',

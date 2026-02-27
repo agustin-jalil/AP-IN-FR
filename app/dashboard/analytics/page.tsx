@@ -109,15 +109,15 @@ export default function AnalyticsPage() {
   }
 
   return (
-    <div className="p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-semibold tracking-tight">Analíticas</h1>
-        <p className="text-muted-foreground mt-1">
+    <div className="p-4 md:p-6 lg:p-8">
+      <div className="mb-6 md:mb-8">
+        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">Analíticas</h1>
+        <p className="text-sm md:text-base text-muted-foreground mt-1">
           Estadísticas y gráficos del inventario
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-4 md:gap-6 md:grid-cols-2">
         {/* Stock por Categoría */}
         <Card className="bg-card border-border">
           <CardHeader>
@@ -133,7 +133,7 @@ export default function AnalyticsPage() {
                   color: '#3b82f6',
                 },
               }}
-              className="h-[300px]"
+              className="h-[250px] md:h-[300px]"
             >
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={categoryData} margin={{ left: 0, right: 0 }}>
@@ -177,7 +177,7 @@ export default function AnalyticsPage() {
                   color: '#10b981',
                 },
               }}
-              className="h-[300px]"
+              className="h-[250px] md:h-[300px]"
             >
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={categoryData} margin={{ left: 0, right: 0 }}>
@@ -226,7 +226,7 @@ export default function AnalyticsPage() {
                   label: 'Cantidad',
                 },
               }}
-              className="h-[300px]"
+              className="h-[250px] md:h-[300px]"
             >
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
@@ -269,7 +269,7 @@ export default function AnalyticsPage() {
                   color: '#8b5cf6',
                 },
               }}
-              className="h-[300px]"
+              className="h-[250px] md:h-[300px]"
             >
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
@@ -307,7 +307,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Summary Table */}
-      <Card className="mt-6 bg-card border-border">
+      <Card className="mt-4 md:mt-6 bg-card border-border">
         <CardHeader>
           <CardTitle className="text-lg font-semibold">
             Resumen por Categoría
